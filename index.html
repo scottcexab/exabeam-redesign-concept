@@ -210,8 +210,14 @@
     background:radial-gradient(circle at 30% 20%, rgba(0,107,255,.14), transparent 55%),
                radial-gradient(circle at 80% 80%, rgba(76,219,0,.12), transparent 55%);
   }
-  .p-visual .glyph{ position:relative; width:96px; height:96px; border-radius:24px; background:var(--gradient-icon); box-shadow:0 16px 40px rgba(0,107,255,.3); display:flex; align-items:center; justify-content:center; }
-  .p-visual .glyph svg{ width:44px; height:44px; stroke:#fff; }
+  /* Platform-row graphics: diagonal-blade motif inspired by the Exabeam mark */
+  .p-graphic{ position:relative; width:220px; height:220px; }
+  .ring-echo{ position:absolute; inset:12px; border-radius:50%; border:1px dashed var(--line); }
+  .blade{ position:absolute; border-radius:6px; box-shadow:0 10px 22px rgba(0,0,0,.1); }
+  .graphic-b .bars-group{ position:absolute; inset:0; transform:rotate(-10deg); }
+  .graphic-b .bar{ bottom:auto; }
+  .graphic-c .core-dot{ position:absolute; top:104px; left:104px; width:12px; height:12px; border-radius:50%; background:var(--ink); box-shadow:0 0 0 5px var(--paper), 0 0 0 6px var(--line); }
+  .graphic-c .radiate{ top:110px; left:103px; transform-origin:top center; }
   .tag-row{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
   .tag{ font-size:12.5px; font-weight:600; padding:5px 12px; border-radius:var(--radius-pill); background:rgba(255,255,255,.06); color:var(--text-on-dark-muted); border:1px solid rgba(255,255,255,.14); }
   .check-list{ list-style:none; margin:20px 0 0; padding:0; display:grid; gap:12px; }
@@ -407,7 +413,15 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Continuous risk scoring, not point-in-time checks</li>
           </ul>
         </div>
-        <div class="p-visual"><div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 12l6 6L21 6"/></svg></div></div>
+        <div class="p-visual">
+          <div class="p-graphic graphic-a">
+            <span class="ring-echo"></span>
+            <span class="blade" style="width:16px;height:110px;top:30px;left:82px;background:var(--blue);transform:rotate(28deg);"></span>
+            <span class="blade" style="width:13px;height:78px;top:52px;left:63px;background:var(--blue-light);opacity:.85;transform:rotate(28deg);"></span>
+            <span class="blade" style="width:16px;height:110px;top:30px;left:122px;background:var(--green);transform:rotate(-28deg);"></span>
+            <span class="blade" style="width:13px;height:78px;top:52px;left:144px;background:var(--green-light);opacity:.85;transform:rotate(-28deg);"></span>
+          </div>
+        </div>
       </div>
 
       <div class="platform-row reverse reveal">
@@ -421,7 +435,18 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> 5x SOC productivity on average</li>
           </ul>
         </div>
-        <div class="p-visual"><div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M4 19V5M4 19h16M9 15l3-4 3 3 3-6"/></svg></div></div>
+        <div class="p-visual">
+          <div class="p-graphic graphic-b">
+            <span class="ring-echo"></span>
+            <div class="bars-group">
+              <span class="blade bar" style="width:15px;height:36px;left:20px;top:154px;background:var(--blue);"></span>
+              <span class="blade bar" style="width:15px;height:66px;left:55px;top:124px;background:var(--green);"></span>
+              <span class="blade bar" style="width:15px;height:96px;left:90px;top:94px;background:var(--blue-light);"></span>
+              <span class="blade bar" style="width:15px;height:130px;left:125px;top:60px;background:var(--green-light);"></span>
+              <span class="blade bar" style="width:15px;height:160px;left:160px;top:30px;background:var(--blue);"></span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="platform-row reveal">
@@ -435,7 +460,16 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Works alongside your existing SIEM</li>
           </ul>
         </div>
-        <div class="p-visual"><div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div></div>
+        <div class="p-visual">
+          <div class="p-graphic graphic-c">
+            <span class="ring-echo"></span>
+            <span class="core-dot"></span>
+            <span class="blade radiate" style="width:14px;height:88px;background:var(--blue);transform:rotate(20deg);"></span>
+            <span class="blade radiate" style="width:14px;height:88px;background:var(--green);transform:rotate(110deg);"></span>
+            <span class="blade radiate" style="width:14px;height:88px;background:var(--blue-light);transform:rotate(200deg);"></span>
+            <span class="blade radiate" style="width:14px;height:88px;background:var(--green-light);transform:rotate(290deg);"></span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
