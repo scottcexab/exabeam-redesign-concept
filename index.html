@@ -52,15 +52,34 @@
           <div class="orbit o1"></div>
           <div class="orbit o2"></div>
           <div class="orbit o3"></div>
-          <div class="orbit-node n1"><span class="counter-spin"><svg viewBox="0 0 24 24" fill="none" stroke="#006BFF" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg></span></div>
-          <div class="orbit-node n2"><span class="counter-spin"><svg viewBox="0 0 24 24" fill="none" stroke="#27B2FF" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg></span></div>
-          <div class="orbit-node n3"><span class="counter-spin"><svg viewBox="0 0 24 24" fill="none" stroke="#4CDB00" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4z"/></svg></span></div>
-          <div class="orbit-node n4"><span class="counter-spin"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 12h16M12 4v16"/></svg></span></div>
+
+          <div class="orbit-node" style="--a:0deg; --fd:0s;">
+            <div class="node-inner node-logo"><span class="counter-spin"><img src="icons/claude.png" alt="Claude"></span></div>
+          </div>
+          <div class="orbit-node" style="--a:51.43deg; --fd:.4s;">
+            <div class="node-inner node-logo"><span class="counter-spin"><img src="icons/openai.png" alt="OpenAI / Codex"></span></div>
+          </div>
+          <div class="orbit-node" style="--a:102.86deg; --fd:.8s;">
+            <div class="node-inner node-logo"><span class="counter-spin"><img src="icons/copilot.png" alt="Microsoft Copilot"></span></div>
+          </div>
+          <div class="orbit-node" style="--a:154.29deg; --fd:1.2s;">
+            <div class="node-inner node-logo"><span class="counter-spin"><img src="icons/agentforce.png" alt="Salesforce Agentforce"></span></div>
+          </div>
+          <div class="orbit-node" style="--a:205.71deg; --fd:1.6s;">
+            <div class="node-inner node-logo"><span class="counter-spin"><img src="icons/openclaw.png" alt="OpenClaw"></span></div>
+          </div>
+          <div class="orbit-node" style="--a:257.14deg; --fd:2s;">
+            <div class="node-inner"><span class="counter-spin"><svg viewBox="0 0 24 24" fill="none" stroke="#27B2FF" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span></div>
+          </div>
+          <div class="orbit-node" style="--a:308.57deg; --fd:2.4s;">
+            <div class="node-inner"><span class="counter-spin"><svg viewBox="0 0 24 24" fill="none" stroke="#4CDB00" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg></span></div>
+          </div>
         </div>
         <div class="orbit-core">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2z"/><path d="M12 8l4 2.2v4.6L12 17l-4-2.2v-4.6L12 8z"/></svg>
         </div>
       </div>
+      <p class="orbit-caption">Modeling behavior across Claude, OpenAI &amp; Codex, Copilot, Agentforce, OpenClaw, custom agents, and human insiders — all in one graph.</p>
     </div>
     <div class="wrap trust-strip">
       <div class="trust-label">Trusted by security teams across finance, healthcare, retail &amp; government</div>
@@ -84,17 +103,17 @@
       </div>
       <div class="grid-3">
         <div class="card reveal">
-          <div class="icon-badge on-light c-blue"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/><path d="M17 3.5a4 4 0 010 9"/></svg></div>
+          <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/><path d="M17 3.5a4 4 0 010 9"/></svg></div>
             <h3>AI agents act like insiders</h3>
             <p>Agents authenticate, request access, and take action autonomously — creating a new class of insider risk with no historical baseline.</p>
         </div>
         <div class="card reveal">
-          <div class="icon-badge on-light c-green"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+          <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
             <h3>Attack surfaces are fragmenting</h3>
             <p>Every new agent, copilot, and integration adds another edge to defend — spread across clouds, SaaS, and custom tooling.</p>
         </div>
         <div class="card reveal">
-          <div class="icon-badge on-light c-purple"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
             <h3>Adoption is decentralized</h3>
             <p>Teams stand up agents independently, outside central visibility — so the SOC finds out about risk after it's already in production.</p>
         </div>
@@ -239,6 +258,14 @@
           </div>
         </div>
       </div>
+
+      <div class="architecture-block reveal">
+        <div class="section-head center">
+          <span class="eyebrow">How It Fits Together</span>
+          <h3>One integrated security operations platform</h3>
+        </div>
+        <img class="architecture-img" src="icons/exabeam-architecture.webp" alt="Exabeam platform architecture: User Experiences layer (Threat Center, Watchlists &amp; Timelines, Outcomes Navigator, Case Manager) on top of the Integrated Security Operations Platform (Behavior Analytics, Threat Correlation, Nova Agent Assistant &amp; Automation, Threat Intelligence, log capture and normalization), backed by Storage &amp; Search.">
+      </div>
     </div>
   </section>
 
@@ -267,27 +294,27 @@
       </div>
       <div class="grid-5">
         <div class="benefit reveal">
-          <div class="icon-badge on-dark sm c-green"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V6l8-4z"/></svg></div>
+          <div class="icon-tile" style="width:40px;height:40px;border-radius:11px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V6l8-4z"/></svg></div>
           <h3>Insider threats</h3>
           <p>Catch risky behavior from trusted accounts before damage is done.</p>
         </div>
         <div class="benefit reveal">
-          <div class="icon-badge on-dark sm c-blue"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 9v4M12 17h.01M10.3 3.9L2.7 18a1.8 1.8 0 001.5 2.7h15.6a1.8 1.8 0 001.5-2.7L13.7 3.9a1.8 1.8 0 00-3.4 0z"/></svg></div>
+          <div class="icon-tile" style="width:40px;height:40px;border-radius:11px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 9v4M12 17h.01M10.3 3.9L2.7 18a1.8 1.8 0 001.5 2.7h15.6a1.8 1.8 0 001.5-2.7L13.7 3.9a1.8 1.8 0 00-3.4 0z"/></svg></div>
           <h3>External threats</h3>
           <p>Detect compromised credentials and lateral movement in real time.</p>
         </div>
         <div class="benefit reveal">
-          <div class="icon-badge on-dark sm c-purple"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+          <div class="icon-tile" style="width:40px;height:40px;border-radius:11px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
           <h3>AI attack surfaces</h3>
           <p>Extend behavior modeling to copilots, agents, and automations.</p>
         </div>
         <div class="benefit reveal">
-          <div class="icon-badge on-dark sm c-blue"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M9 12l2 2 4-4M5.5 6L12 3l6.5 3v6c0 5-3 7.5-6.5 9-3.5-1.5-6.5-4-6.5-9V6z"/></svg></div>
+          <div class="icon-tile" style="width:40px;height:40px;border-radius:11px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M9 12l2 2 4-4M5.5 6L12 3l6.5 3v6c0 5-3 7.5-6.5 9-3.5-1.5-6.5-4-6.5-9V6z"/></svg></div>
           <h3>Compliance</h3>
           <p>Audit-ready evidence and reporting mapped to your frameworks.</p>
         </div>
         <div class="benefit reveal">
-          <div class="icon-badge on-dark sm c-green"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+          <div class="icon-tile" style="width:40px;height:40px;border-radius:11px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
           <h3>Open architecture</h3>
           <p>Vendor-agnostic by design — bring your own stack.</p>
         </div>
