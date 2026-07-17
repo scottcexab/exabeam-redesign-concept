@@ -244,6 +244,7 @@
   }
   .p-chart{ position:relative; width:100%; max-width:340px; height:auto; }
   .p-chart-lg{ max-width:440px; }
+  .p-chart-xl{ max-width:680px; }
   .p-visual-dark{ background:transparent; border-color:rgba(255,255,255,.1); box-shadow:none; }
   .p-visual-dark::before{ background:none; }
   .deviation-ring{ transform-box:fill-box; transform-origin:center; animation:dev-pulse 2.2s ease-in-out infinite; }
