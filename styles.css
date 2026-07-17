@@ -174,12 +174,20 @@
     transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
   }
   .card:hover{ transform:translateY(-4px); box-shadow:0 20px 50px rgba(0,0,0,.35); border-color:#dcdcee; }
-  .icon-tile{
-    width:48px; height:48px; border-radius:14px; margin-bottom:20px;
+  /* Icon badges: ring-outline circles matching Exabeam deck iconography */
+  .icon-badge{
+    width:52px; height:52px; border-radius:50%; margin-bottom:20px; flex:none;
     display:flex; align-items:center; justify-content:center;
-    background:var(--gradient-icon);
+    border:2px solid var(--badge-c, var(--blue));
   }
-  .icon-tile svg{ width:22px; height:22px; stroke:#fff; }
+  .icon-badge svg{ width:22px; height:22px; stroke:var(--badge-c, var(--blue)); }
+  .icon-badge.on-light{ background:var(--badge-tint, rgba(0,107,255,.1)); }
+  .icon-badge.on-dark{ background:rgba(0,0,0,.4); box-shadow:0 0 24px -4px var(--badge-c, var(--blue)); }
+  .icon-badge.sm{ width:40px; height:40px; margin-bottom:16px; }
+  .icon-badge.sm svg{ width:18px; height:18px; }
+  .icon-badge.c-blue{ --badge-c:var(--blue); --badge-tint:rgba(0,107,255,.1); }
+  .icon-badge.c-green{ --badge-c:var(--green); --badge-tint:rgba(0,157,0,.1); }
+  .icon-badge.c-purple{ --badge-c:var(--purple); --badge-tint:rgba(141,0,255,.1); }
   .card p{ margin:0; font-size:15px; color:var(--text-muted); }
 
   /* PLATFORM ROWS */
@@ -207,9 +215,14 @@
   .graphic-c .radiate{ top:110px; left:103px; transform-origin:top center; }
   .tag-row{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
   .tag{ font-size:12.5px; font-weight:600; padding:5px 12px; border-radius:var(--radius-pill); background:rgba(255,255,255,.06); color:var(--text-on-dark-muted); border:1px solid rgba(255,255,255,.14); }
-  .check-list{ list-style:none; margin:20px 0 0; padding:0; display:grid; gap:12px; }
-  .check-list li{ display:flex; gap:10px; font-size:14.5px; color:#EDEDED; align-items:flex-start; }
-  .check-list svg{ width:18px; height:18px; flex:none; margin-top:2px; stroke:var(--green-light); }
+  .check-list{ list-style:none; margin:20px 0 0; padding:0; display:grid; gap:14px; }
+  .check-list li{ display:flex; gap:12px; font-size:14.5px; color:#EDEDED; align-items:center; }
+  .check-badge{
+    width:22px; height:22px; border-radius:50%; flex:none;
+    border:1.6px solid var(--green-light); background:rgba(76,219,0,.14);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .check-badge svg{ width:12px; height:12px; stroke:var(--green-light); stroke-width:3; }
 
   /* KILL CHAIN TIMELINE */
   .killchain-timeline{ position:relative; max-width:680px; margin:0 auto; padding-left:64px; }
@@ -276,7 +289,9 @@
   .stat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:56px; }
   @media (max-width:760px){ .stat-grid{ grid-template-columns:1fr; } }
   .stat{ text-align:center; padding:28px 20px; border:1px solid var(--line); border-radius:var(--radius-lg); background:var(--paper); box-shadow:var(--shadow-soft); }
-  .stat .num{ font-family:'Space Grotesk',sans-serif; font-size:44px; font-weight:700; background:var(--gradient-brand); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .stat .num{ font-family:'Space Grotesk',sans-serif; font-size:44px; font-weight:700; color:var(--green); }
+  .stat:nth-child(2) .num{ color:var(--blue); }
+  .stat:nth-child(3) .num{ color:var(--purple); }
   .stat .label{ color:var(--text-muted); font-size:14px; margin-top:8px; }
 
   /* BENEFITS */
