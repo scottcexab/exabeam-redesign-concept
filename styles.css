@@ -230,6 +230,10 @@
     background:radial-gradient(circle at 30% 20%, rgba(0,107,255,.14), transparent 55%),
                radial-gradient(circle at 80% 80%, rgba(76,219,0,.12), transparent 55%);
   }
+  .p-chart{ position:relative; width:100%; max-width:340px; height:auto; }
+  .deviation-ring{ transform-box:fill-box; transform-origin:center; animation:dev-pulse 2.2s ease-in-out infinite; }
+  @keyframes dev-pulse{ 0%{ transform:scale(.9); opacity:.9; } 75%{ transform:scale(2.2); opacity:0; } 100%{ opacity:0; } }
+  @media (prefers-reduced-motion: reduce){ .deviation-ring{ animation:none; } }
   /* Platform-row graphics: diagonal-blade motif inspired by the Exabeam mark */
   .p-graphic{ position:relative; width:220px; height:220px; }
   .ring-echo{ position:absolute; inset:12px; border-radius:50%; border:1px dashed var(--line); }

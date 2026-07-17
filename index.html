@@ -203,13 +203,24 @@
           </ul>
         </div>
         <div class="p-visual">
-          <div class="p-graphic graphic-a">
-            <span class="ring-echo"></span>
-            <span class="blade" style="width:16px;height:110px;top:30px;left:82px;background:var(--blue);transform:rotate(28deg);"></span>
-            <span class="blade" style="width:13px;height:78px;top:52px;left:63px;background:var(--blue-light);opacity:.85;transform:rotate(28deg);"></span>
-            <span class="blade" style="width:16px;height:110px;top:30px;left:122px;background:var(--green);transform:rotate(-28deg);"></span>
-            <span class="blade" style="width:13px;height:78px;top:52px;left:144px;background:var(--green-light);opacity:.85;transform:rotate(-28deg);"></span>
-          </div>
+          <svg class="p-chart" viewBox="0 0 300 170" fill="none" aria-hidden="true">
+            <rect x="8" y="58" width="284" height="46" rx="10" fill="var(--blue)" opacity=".08"/>
+            <line x1="8" y1="81" x2="292" y2="81" stroke="var(--blue)" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="3 5"/>
+            <text x="8" y="48" fill="var(--text-muted)" font-size="10" font-family="Inter, sans-serif" letter-spacing=".04em">NORMAL BASELINE</text>
+            <polyline points="10,88 40,74 70,92 100,68 130,86 160,78 190,20 220,84 250,70 280,90" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="88" r="4" fill="var(--blue)"/>
+            <circle cx="40" cy="74" r="4" fill="var(--green)"/>
+            <circle cx="70" cy="92" r="4" fill="var(--blue)"/>
+            <circle cx="100" cy="68" r="4" fill="var(--green)"/>
+            <circle cx="130" cy="86" r="4" fill="var(--blue)"/>
+            <circle cx="160" cy="78" r="4" fill="var(--green)"/>
+            <circle cx="220" cy="84" r="4" fill="var(--blue)"/>
+            <circle cx="250" cy="70" r="4" fill="var(--green)"/>
+            <circle cx="280" cy="90" r="4" fill="var(--blue)"/>
+            <circle class="deviation-ring" cx="190" cy="20" r="10" fill="none" stroke="#FF7A1A" stroke-width="2"/>
+            <circle cx="190" cy="20" r="6" fill="#FF7A1A"/>
+            <text x="196" y="16" fill="#FF7A1A" font-size="10" font-weight="700" font-family="Inter, sans-serif">DEVIATION</text>
+          </svg>
         </div>
       </div>
 
