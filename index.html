@@ -202,24 +202,43 @@
             <li><span class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span> Continuous risk scoring, not point-in-time checks</li>
           </ul>
         </div>
-        <div class="p-visual">
-          <svg class="p-chart" viewBox="0 0 300 170" fill="none" aria-hidden="true">
-            <rect x="8" y="58" width="284" height="46" rx="10" fill="var(--blue)" opacity=".08"/>
-            <line x1="8" y1="81" x2="292" y2="81" stroke="var(--blue)" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="3 5"/>
-            <text x="8" y="48" fill="var(--text-muted)" font-size="10" font-family="Inter, sans-serif" letter-spacing=".04em">NORMAL BASELINE</text>
-            <polyline points="10,88 40,74 70,92 100,68 130,86 160,78 190,20 220,84 250,70 280,90" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="10" cy="88" r="4" fill="var(--blue)"/>
-            <circle cx="40" cy="74" r="4" fill="var(--green)"/>
-            <circle cx="70" cy="92" r="4" fill="var(--blue)"/>
-            <circle cx="100" cy="68" r="4" fill="var(--green)"/>
-            <circle cx="130" cy="86" r="4" fill="var(--blue)"/>
-            <circle cx="160" cy="78" r="4" fill="var(--green)"/>
-            <circle cx="220" cy="84" r="4" fill="var(--blue)"/>
-            <circle cx="250" cy="70" r="4" fill="var(--green)"/>
-            <circle cx="280" cy="90" r="4" fill="var(--blue)"/>
+        <div class="p-visual p-visual-dark">
+          <svg class="p-chart p-chart-lg" viewBox="0 0 300 210" fill="none" aria-hidden="true">
+            <rect x="8" y="58" width="284" height="46" rx="10" fill="var(--blue)" opacity=".14"/>
+            <line x1="8" y1="81" x2="292" y2="81" stroke="var(--blue-light)" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="3 5"/>
+            <text x="8" y="48" fill="#A3A3A3" font-size="10" font-family="Inter, sans-serif" letter-spacing=".04em">NORMAL BASELINE</text>
+            <polyline points="10,88 40,74 70,92 100,68 130,86 160,78 190,20 220,84 250,70 280,90" stroke="var(--blue-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="88" r="4" fill="var(--blue-light)"/>
+            <circle cx="40" cy="74" r="4" fill="var(--green-light)"/>
+            <circle cx="70" cy="92" r="4" fill="var(--blue-light)"/>
+            <circle cx="100" cy="68" r="4" fill="var(--green-light)"/>
+            <circle cx="130" cy="86" r="4" fill="var(--blue-light)"/>
+            <circle cx="160" cy="78" r="4" fill="var(--green-light)"/>
+            <circle cx="220" cy="84" r="4" fill="var(--blue-light)"/>
+            <circle cx="250" cy="70" r="4" fill="var(--green-light)"/>
+            <circle cx="280" cy="90" r="4" fill="var(--blue-light)"/>
             <circle class="deviation-ring" cx="190" cy="20" r="10" fill="none" stroke="#FF7A1A" stroke-width="2"/>
             <circle cx="190" cy="20" r="6" fill="#FF7A1A"/>
             <text x="196" y="16" fill="#FF7A1A" font-size="10" font-weight="700" font-family="Inter, sans-serif">DEVIATION</text>
+
+            <line x1="8" y1="122" x2="292" y2="122" stroke="#fff" stroke-opacity=".08" stroke-width="1"/>
+
+            <g>
+              <circle cx="26" cy="152" r="16" fill="rgba(76,219,0,.14)" stroke="var(--green-light)" stroke-width="1.6"/>
+              <rect x="19" y="145" width="14" height="10" rx="2" stroke="var(--green-light)" stroke-width="1.4"/>
+              <circle cx="23" cy="150" r="1" fill="var(--green-light)"/>
+              <circle cx="29" cy="150" r="1" fill="var(--green-light)"/>
+              <path d="M26 145v-3" stroke="var(--green-light)" stroke-width="1.4"/>
+              <text x="50" y="149" font-size="10" font-weight="700" font-family="Inter, sans-serif" fill="#EDEDED">AI Agent</text>
+              <text x="50" y="160" font-size="8" font-family="Inter, sans-serif" fill="#A3A3A3">Service account, baselined</text>
+            </g>
+            <g>
+              <circle cx="26" cy="188" r="16" fill="rgba(0,107,255,.14)" stroke="var(--blue-light)" stroke-width="1.6"/>
+              <circle cx="26" cy="184" r="4" stroke="var(--blue-light)" stroke-width="1.4"/>
+              <path d="M19 194a7 7 0 0114 0" stroke="var(--blue-light)" stroke-width="1.4"/>
+              <text x="50" y="185" font-size="10" font-weight="700" font-family="Inter, sans-serif" fill="#EDEDED">Human User</text>
+              <text x="50" y="196" font-size="8" font-family="Inter, sans-serif" fill="#A3A3A3">Employee, baselined</text>
+            </g>
           </svg>
         </div>
       </div>
