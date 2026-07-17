@@ -141,7 +141,7 @@
   }
   .orbit-node .counter-spin{ display:flex; animation: spin-reverse 50s linear infinite; }
   .orbit-node svg{ width:22px; height:22px; }
-  .orbit-node img{ width:26px; height:26px; object-fit:cover; border-radius:50%; }
+  .orbit-node img{ width:24px; height:24px; object-fit:contain; }
   .orbit-node.n-blue .node-inner{ --nc:var(--blue); --nc-rgb:0,107,255; }
   .orbit-node.n-green .node-inner{ --nc:var(--green-light); --nc-rgb:76,219,0; }
   .orbit-node.n-purple .node-inner{ --nc:var(--purple); --nc-rgb:141,0,255; }
