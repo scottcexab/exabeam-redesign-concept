@@ -265,7 +265,7 @@
   .kc-dot.c-blue{ --nc:var(--blue); --nc-rgb:0,107,255; }
   .kc-dot.c-green{ --nc:var(--green-light); --nc-rgb:76,219,0; }
   .kc-dot.c-purple{ --nc:var(--purple); --nc-rgb:141,0,255; }
-  .kc-dot-flag{ background:var(--gradient-icon); color:#fff; border-color:transparent; }
+  .kc-dot.c-orange{ --nc:#FF7A1A; --nc-rgb:255,122,26; background:rgba(255,122,26,.32); }
   .kc-card{ padding-top:6px; }
   .kc-card h3{ margin-bottom:6px; }
   .kc-card p{ margin:0; }
