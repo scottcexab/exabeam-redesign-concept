@@ -125,15 +125,17 @@
   .hero p.lede{ font-size:19px; color:#B9B8CF; max-width:520px; }
   .hero-ctas{ display:flex; gap:14px; margin-top:30px; flex-wrap:wrap; }
 
-  /* hero visual: orbit graphic */
+  /* hero visual: orbit graphic (animated) */
   .orbit-wrap{ position:relative; height:420px; display:flex; align-items:center; justify-content:center; }
-  .orbit{ position:absolute; border-radius:50%; border:1px solid rgba(255,255,255,.14); }
+  .orbit-spin{ position:absolute; inset:0; animation: spin 50s linear infinite; }
+  .orbit{ position:absolute; top:50%; left:50%; border-radius:50%; border:1px solid rgba(255,255,255,.14); transform:translate(-50%,-50%); }
   .orbit.o1{ width:420px; height:420px; }
-  .orbit.o2{ width:320px; height:320px; border-style:dashed; border-color:rgba(255,255,255,.18); }
-  .orbit.o3{ width:220px; height:220px; }
+  .orbit.o2{ width:320px; height:320px; border-style:dashed; border-color:rgba(255,255,255,.2); animation: spin-reverse-centered 30s linear infinite; }
+  .orbit.o3{ width:220px; height:220px; animation: pulse-ring 6s ease-in-out infinite; }
   .orbit-core{
-    width:120px; height:120px; border-radius:28px; background:var(--gradient-icon);
+    position:relative; width:120px; height:120px; border-radius:28px; background:var(--gradient-icon);
     display:flex; align-items:center; justify-content:center; box-shadow:0 30px 80px rgba(0,107,255,.4);
+    animation: core-pulse 4.5s ease-in-out infinite;
   }
   .orbit-core svg{ width:52px; height:52px; }
   .orbit-node{
@@ -141,13 +143,25 @@
     background:var(--panel-dark); border:1px solid var(--panel-dark-border);
     display:flex; align-items:center; justify-content:center;
     box-shadow:0 12px 30px rgba(0,0,0,.4);
+    animation: node-float 3.6s ease-in-out infinite;
   }
+  .orbit-node .counter-spin{ display:flex; animation: spin-reverse 50s linear infinite; }
   .orbit-node svg{ width:24px; height:24px; }
-  .n1{ top:8px; left:50%; transform:translateX(-50%); }
-  .n2{ bottom:26px; left:14px; }
-  .n3{ bottom:26px; right:14px; }
-  .n4{ top:50%; right:-6px; transform:translateY(-50%); }
+  .n1{ top:8px; left:50%; margin-left:-28px; animation-delay:0s; }
+  .n2{ bottom:26px; left:14px; animation-delay:.9s; }
+  .n3{ bottom:26px; right:14px; animation-delay:1.8s; }
+  .n4{ top:50%; right:-6px; margin-top:-28px; animation-delay:2.7s; }
   @media (max-width:520px){ .orbit-wrap{ height:320px;} .orbit.o1{width:300px;height:300px;} .orbit.o2{width:220px;height:220px;} .orbit.o3{width:150px;height:150px;} }
+
+  @keyframes spin{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
+  @keyframes spin-reverse{ from{ transform:rotate(0deg); } to{ transform:rotate(-360deg); } }
+  @keyframes spin-reverse-centered{ from{ transform:translate(-50%,-50%) rotate(0deg); } to{ transform:translate(-50%,-50%) rotate(-360deg); } }
+  @keyframes core-pulse{ 0%,100%{ transform:scale(1); box-shadow:0 30px 80px rgba(0,107,255,.4); } 50%{ transform:scale(1.05); box-shadow:0 34px 90px rgba(76,219,0,.4); } }
+  @keyframes node-float{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-8px); } }
+  @keyframes pulse-ring{ 0%,100%{ opacity:.6; transform:translate(-50%,-50%) scale(1); } 50%{ opacity:1; transform:translate(-50%,-50%) scale(1.03); } }
+  @media (prefers-reduced-motion: reduce){
+    .orbit-spin, .orbit.o2, .orbit.o3, .orbit-core, .orbit-node, .orbit-node .counter-spin{ animation:none !important; }
+  }
 
   .trust-strip{ margin-top:64px; padding-top:34px; border-top:1px solid rgba(255,255,255,.1); }
   .trust-label{ font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; color:#8A899E; margin-bottom:18px; }
@@ -319,16 +333,18 @@
         </div>
       </div>
       <div class="orbit-wrap" aria-hidden="true">
-        <div class="orbit o1"></div>
-        <div class="orbit o2"></div>
-        <div class="orbit o3"></div>
+        <div class="orbit-spin">
+          <div class="orbit o1"></div>
+          <div class="orbit o2"></div>
+          <div class="orbit o3"></div>
+          <div class="orbit-node n1"><span class="counter-spin"><svg viewBox="0 0 24 24" fill="none" stroke="#006BFF" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg></span></div>
+          <div class="orbit-node n2"><span class="counter-spin"><svg viewBox="0 0 24 24" fill="none" stroke="#27B2FF" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg></span></div>
+          <div class="orbit-node n3"><span class="counter-spin"><svg viewBox="0 0 24 24" fill="none" stroke="#4CDB00" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4z"/></svg></span></div>
+          <div class="orbit-node n4"><span class="counter-spin"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 12h16M12 4v16"/></svg></span></div>
+        </div>
         <div class="orbit-core">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2z"/><path d="M12 8l4 2.2v4.6L12 17l-4-2.2v-4.6L12 8z"/></svg>
         </div>
-        <div class="orbit-node n1"><svg viewBox="0 0 24 24" fill="none" stroke="#006BFF" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg></div>
-        <div class="orbit-node n2"><svg viewBox="0 0 24 24" fill="none" stroke="#27B2FF" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg></div>
-        <div class="orbit-node n3"><svg viewBox="0 0 24 24" fill="none" stroke="#4CDB00" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4z"/></svg></div>
-        <div class="orbit-node n4"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 12h16M12 4v16"/></svg></div>
       </div>
     </div>
     <div class="wrap trust-strip">
