@@ -120,11 +120,12 @@
   .orbit.o2{ width:320px; height:320px; border-style:dashed; border-color:rgba(255,255,255,.2); animation: spin-reverse-centered 30s linear infinite; }
   .orbit.o3{ width:220px; height:220px; animation: pulse-ring 6s ease-in-out infinite; }
   .orbit-core{
-    position:relative; width:120px; height:120px; border-radius:28px; background:var(--gradient-icon);
-    display:flex; align-items:center; justify-content:center; box-shadow:0 30px 80px rgba(0,107,255,.4);
+    position:relative; width:120px; height:120px; border-radius:28px;
+    background:var(--panel-dark); border:1px solid var(--panel-dark-border);
+    display:flex; align-items:center; justify-content:center; box-shadow:0 30px 80px rgba(0,107,255,.35);
     animation: core-pulse 4.5s ease-in-out infinite;
   }
-  .orbit-core svg{ width:52px; height:52px; }
+  .orbit-core svg{ width:58px; height:auto; }
   .orbit-node{
     position:absolute; top:50%; left:50%; width:52px; height:52px; margin:-26px 0 0 -26px;
     transform: rotate(var(--a, 0deg)) translateY(-172px);
