@@ -161,9 +161,9 @@
     .orbit-spin, .orbit.o2, .orbit.o3, .orbit-core, .orbit-node, .orbit-node .counter-spin{ animation:none !important; }
   }
 
-  .trust-strip{ margin-top:64px; padding-top:34px; border-top:1px solid rgba(255,255,255,.1); }
+  .trust-strip{ margin-top:64px; padding-top:34px; border-top:1px solid rgba(255,255,255,.1); text-align:center; }
   .trust-label{ font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; color:#8A899E; margin-bottom:18px; }
-  .trust-logos{ display:flex; gap:28px; flex-wrap:wrap; align-items:center; }
+  .trust-logos{ display:flex; gap:28px; flex-wrap:wrap; align-items:center; justify-content:center; }
   .trust-logos span{
     height:34px; padding:0 18px; display:flex; align-items:center;
     color:#8A899E; font-weight:600; font-size:13px; letter-spacing:.03em;
