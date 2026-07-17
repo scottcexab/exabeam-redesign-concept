@@ -81,7 +81,7 @@
   }
   .btn-ring:hover::after{ inset:-7px; border-color:rgba(255,255,255,.55); }
   .spark-orbit{
-    position:absolute; inset:0; pointer-events:none;
+    position:absolute; inset:-5px; pointer-events:none;
     offset-path: polygon(0% 50%, 8% 12%, 25% 0%, 75% 0%, 92% 12%, 100% 50%, 92% 88%, 75% 100%, 25% 100%, 8% 88%, 0% 50%);
     animation: spark-travel 3.2s linear infinite;
   }
