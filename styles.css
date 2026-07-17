@@ -125,7 +125,7 @@
     display:flex; align-items:center; justify-content:center; box-shadow:none;
     animation: core-pulse 4.5s ease-in-out infinite;
   }
-  .orbit-core svg{ width:58px; height:auto; }
+  .orbit-core svg{ width:174px; height:auto; }
   .orbit-node{
     position:absolute; top:50%; left:50%; width:52px; height:52px; margin:-26px 0 0 -26px;
     transform: rotate(var(--a, 0deg)) translateY(-172px);
